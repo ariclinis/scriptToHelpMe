@@ -6,8 +6,8 @@ def emailFun(size)
 i=0
 emails=[]
 	until(i>=size)
-	emails<< Faker::Internet.email
-	i=i+1
+		emails<< Faker::Internet.email
+		i=i+1
 	end
 emails
 end
@@ -40,7 +40,7 @@ end
 def tblMovies(size)
 i=size/2;
 until(i>=size)
-	puts("INSERT INTO filmes values('#{@emailG[i]}');")
+	puts("INSERT INTO filmes values('#{Faker::Movie.quote},'#{rand(1876..2019)}',#{@emailG[i]}');")
 	i=i+1
 end
 
